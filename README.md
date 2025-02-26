@@ -33,7 +33,7 @@ Validates a safe parsed Zod schema and checks whether or not it's the expected s
 #### Examples
 
 ```js
-expect(safeParsedZodObjectSchema).toBeValidZodObject(); // expects the valid parse result
+expect(safeParsedZodObjectSchema).toBeValidZodObject(); // expects a valid parse result
 expect(safeParsedZodObjectSchema).toBeValidZodObject({foo: 'bar'}); // expects "foo" to be available in the parsed result and its value be a string of "bar"
 ```
 
