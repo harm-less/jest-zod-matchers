@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`"zodParseToThrowError" matcher errors should throw an error as the Zod error should not be the same as the expected error 1`] = `
+"[2mexpect([22m[31mzodSafeParseReturnType[39m[2m).[22mnot[2m.[22mtoThrowZodError[2m([22m[32mexpectedErrorMessage[39m[2m) // Zod schema validation error message equality[22m
+
+Expected a Zod error to have been thrown, but it should not equal the expected error
+
+Expected: [32m"Expected string, received number at \\"foo\\""[39m
+Received: serializes to the same string"
+`;
+
+exports[`"zodParseToThrowError" matcher errors should throw an error as the input is valid 1`] = `
+"[2mexpect([22m[31mzodSafeParseReturnType[39m[2m).[22mtoThrowZodError[2m([22m[32mexpectedErrorMessage[39m[2m) // Zod schema validation error message equality[22m
+
+Expected an error to have been thrown with the following message: 
+[32m"This will not be triggered"[39m 
+
+But no error was throw."
+`;

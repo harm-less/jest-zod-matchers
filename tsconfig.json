@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "es2022",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+
+    // snable strictness
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+
+    // transpilation
+    "module": "NodeNext",
+    "outDir": "dist",
+    "lib": [
+      "es2022"
+    ]
+  },
+
+  "include": [
+    "src",
+    "jest.config.ts"
+  ],
+  
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

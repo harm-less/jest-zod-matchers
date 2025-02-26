@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`"toBeValidZodObject" matcher errors invalid parsed object with expected result 1`] = `
+"[2mexpect([22m[31mzodSafeParseReturnType[39m[2m).[22mtoBeValidZodObject[2m([22m[32mzodOutputObject[39m[2m) // Validate Zod object schema[22m
+
+[32m- zodSafeParseData  - 1[39m
+[31m+ zodOutputObject   + 1[39m
+
+[2m  Object {[22m
+[32m-   "foo": "baz",[39m
+[31m+   "foo": "bar",[39m
+[2m  }[22m"
+`;
+
+exports[`"toBeValidZodObject" matcher errors invalid parsed object with transformed key 1`] = `
+"[2mexpect([22m[31mzodSafeParseReturnType[39m[2m).[22mtoBeValidZodObject[2m([22m[32mzodOutputObject[39m[2m) // Validate Zod object schema[22m
+
+[32m- zodSafeParseData  - 1[39m
+[31m+ zodOutputObject   + 1[39m
+
+[2m  Object {[22m
+[32m-   "foo": "<baz>",[39m
+[31m+   "foo": "<bar>",[39m
+[2m  }[22m"
+`;
+
+exports[`"toBeValidZodObject" matcher errors negated validation but without supplying zod output object 1`] = `
+"[2mexpect([22m[31mzodSafeParseReturnType[39m[2m).[22mnot[2m.[22mtoBeValidZodObject[2m([22m[32mzodOutputObject[39m[2m) // Validate Zod object schema[22m
+
+This test is negated with the ".not" keyword and the "zodOutputObject" object is undefined. Either make sure the received "zodSafeParseReturnType" is of type "SafeParseSuccess" or if you want to test Zod error messages use the "toThrowZodError" matcher instead of "toBeValidZodObject""
+`;
+
+exports[`"toBeValidZodObject" matcher errors should throw an error if an expected property is not set in the received object 1`] = `
+"[2mexpect([22m[31mzodSafeParseReturnType[39m[2m).[22mtoBeValidZodObject[2m([22m[32mzodOutputObject[39m[2m) // Validate Zod object schema[22m
+
+Property "bar" provided in expected result, but this property does not exist in the received Zod input object. Either remove key "bar" from your expected result, or make sure it's available in the received Zod input object"
+`;
+
+exports[`"toBeValidZodObject" matcher errors should throw error an error as the input is invalid 1`] = `
+"[2mexpect([22m[31mzodSafeParseReturnType[39m[2m).[22mtoBeValidZodObject[2m([22m[32mzodOutputObject[39m[2m) // Validate Zod object schema[22m
+
+Expected Zod schema input to be valid but a Zod error occured instead.
+
+[1mZod error: Required at "foo"[22m"
+`;
+
+exports[`"toBeValidZodObject" matcher errors zod object to not be valid 1`] = `
+"[2mexpect([22m[31mzodSafeParseReturnType[39m[2m).[22mnot[2m.[22mtoBeValidZodObject[2m([22m[32mzodOutputObject[39m[2m) // Validate Zod object schema[22m
+
+zodSafeParseData: [32m{"foo": "bar"}[39m
+zodOutputObject:  serializes to the same string"
+`;
