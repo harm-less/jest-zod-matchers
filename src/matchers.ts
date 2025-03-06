@@ -5,7 +5,10 @@ declare global {
 	namespace jest {
 		interface Matchers<R> {
 			toBeValidZodObject<Response extends Record<string, unknown>>(
-				zodOutputObject?: Partial<Response>
+				zodOutputObject?: Partial<{
+					// eslint-disable-next-line @typescript-eslint/no-explicit-any
+					[K in keyof Response]: any;
+				}>
 			): R;
 			toThrowZodError(expectedError: string): R;
 		}
