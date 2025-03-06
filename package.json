@@ -1,6 +1,6 @@
 {
 	"name": "jest-zod-matchers",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"description": "Custom Jest matchers to help validate Zod schemas and to prevent having a lot of boilerplate",
 	"author": "Harm (https://github.com/harm-less)",
 	"main": "dist/index.js",
